@@ -55,6 +55,10 @@ function loadDescriptions() {
 
 loadDescriptions();
 
+setTimeout(function() {
+	loadDescriptions();	
+}, 250);
+
 document.body.addEventListener('click', function() {
 	setTimeout(function() {
 		loadDescriptions();
