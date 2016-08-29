@@ -55,9 +55,9 @@ function loadDescriptions() {
 
 loadDescriptions();
 
-setTimeout(function() {
+setInterval(function() {
 	loadDescriptions();	
-}, 250);
+}, 1000);
 
 document.body.addEventListener('click', function() {
 	setTimeout(function() {
