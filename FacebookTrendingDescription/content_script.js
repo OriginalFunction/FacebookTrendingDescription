@@ -8,6 +8,7 @@ function loadDescriptions() {
 				var item = list.childNodes[i];
 				var topicId = item.getAttribute('data-topicid');
 				if (topicId) {
+					item.firstChild.setAttribute('style', 'max-height: 75px;');
 					var link = item.getElementsByTagName('a')[0];
 					if (link) {
 						if (!link.getAttribute('descLoaded')) {
@@ -30,10 +31,11 @@ function loadDescriptions() {
 
 													var anchors = doc.getElementsByTagName('a');
 													if (anchors[0]) {
-														var text = anchors[0].firstChild.childNodes[1].firstChild.innerHTML;
+														var text = anchors[0].firstChild.childNodes[0].firstChild.innerHTML;
+														var text2 = anchors[0].firstChild.childNodes[1].firstChild.innerHTML;
 
 														link.setAttribute('descLoaded', 'true');
-														link.firstChild.childNodes[1].innerHTML = text + '<br/>' + link.firstChild.childNodes[1].innerHTML;
+														link.firstChild.childNodes[1].innerHTML = text + '. ' + text2; // + ' <br/>' + link.firstChild.childNodes[1].innerHTML;
 													}
 												} catch (err) {
 
