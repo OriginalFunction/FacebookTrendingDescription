@@ -1,6 +1,6 @@
 # FacebookTrendingDescription
 
-Simple 5 minute chrome extension to restore Facebook trending topic descriptions.
+Simple 5 minute chrome extension to restore Facebook trending topic descriptions. (No longer needed)
 
 To use, simply download the CRX file, drag and drop in to Chrome and install.
 
